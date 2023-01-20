@@ -6,6 +6,7 @@ import java.util.List;
 public class Customer {
     private int id;
     private String name;
+    private int balance; //added by me
     private List<AccountRecord> charges = new ArrayList<>();
 
     public int getId() {
@@ -24,9 +25,18 @@ public class Customer {
         this.name = name;
     }
 
-    public int getBalance() {
+    public void updateBalance(int charge) {
+        balance += charge;
+    }
+
+    public int getBalance() { //made by me
         //update this
         return 0;
+    }
+
+    public checkPositive(Customer aCustomer) { //made by me
+        if (aCustomer.balance >= 0) {return true;}
+        else {return false}
     }
 
     public List<AccountRecord> getCharges() {

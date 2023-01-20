@@ -6,6 +6,20 @@ import java.util.List;
 
 public class Main {
 
+//    Notes to self:
+//    each customer has a unique number identifier
+//    each transaction has a data attached
+//    charges need to be parsed to int so that balance can be updated
+//    charges do not need to be parsed back into strings to output
+//    create a private balance variable in customer class *DONE*
+//    create checkPositive (0 inclusive) *DONE* and checkNegative functions
+//    Find and output number of unique customers
+//    Does "print customer information include all account records?
+//    create updateBalance method *DONE*
+
+
+
+
     private static List<String[]> customerData = Arrays.asList(
             new String[] {"1","Wayne Enterprises","10000","12-01-2021"},
             new String[] {"2","Daily Planet","-7500","01-10-2022"},
@@ -28,7 +42,24 @@ public class Main {
 
     public static void main(String[] args) {
         //Update this
+
+//        for (int i = 0; i > customerData.length();i++) {
+//
+//        }
+
+        System.out.println(customerData.length());
+
+
+
+        System.out.println("There are " + "unique customers.");
+
+
+
+//      Print out all accounts that have a positive balance
         System.out.println("Positive accounts:");
+
+
+
         System.out.println("Negative accounts:");
     }
 }
