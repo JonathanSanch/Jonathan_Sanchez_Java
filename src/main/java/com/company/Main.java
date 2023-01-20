@@ -8,6 +8,7 @@ public class Main {
 
 //    Notes to self:
 //    each customer has a unique number identifier
+//    each customer needs their own Customer object
 //    each transaction has a data attached
 //    charges need to be parsed to int so that balance can be updated
 //    charges do not need to be parsed back into strings to output
@@ -16,7 +17,9 @@ public class Main {
 //    Find and output number of unique customers
 //    Does "print customer information include all account records?
 //    create updateBalance method *DONE*
-
+//    For get balance, need to use the stream into a new method "sum" that will take all the charges
+//    and then add them up for the getBalance method that access the Account Record. This will
+//    allow me to not have to make my own variables.
 
 
 
@@ -47,7 +50,7 @@ public class Main {
 //
 //        }
 
-        System.out.println(customerData.length());
+
 
 
 
