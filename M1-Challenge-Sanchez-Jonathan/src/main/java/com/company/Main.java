@@ -5,24 +5,6 @@ import java.util.stream.Collectors;
 
 public class Main {
 
-//    Notes to self:
-//    each customer has a unique number identifier *DONE*
-//    each customer needs their own Customer object *DONE*
-//    each transaction has a data attached
-//    charges need to be parsed to int so that balance can be updated *DONE*
-//    charges do not need to be parsed back into strings to output *DONE*
-//    create a private balance variable in customer class *DONE*
-//    create checkPositive (0 inclusive) *DONE* and checkNegative functions(Not needed)
-//    Find and output number of unique customers *DONE*
-//    Does "print customer information include all account records?
-//    create updateBalance method *DONE*
-//    For get balance, need to use the stream into a new method "sum" that will take all the charges
-//    and then add them up for the getBalance method that access the Account Record. This will
-//    allow me to not have to make my own variables.
-//    For testing class, instead of putting everything inside the constructor, use the setter and getter
-//    methods in order to set the values of the test customer object and class
-
-
     private static List<String[]> customerData = Arrays.asList(
             new String[]{"1", "Wayne Enterprises", "10000", "12-01-2021"},
             new String[]{"2", "Daily Planet", "-7500", "01-10-2022"},
@@ -45,11 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Update this
-
-//        Customer WayneEnterprises = new Customer(1, "Wayne Enterprises", 0);
-//        Customer DailyPlanet = new Customer(2, "Daily Planet", 0);
-//        Customer AceChemical = new Customer(3, "Ace Chemical", 0);
-
+//      Hashset used for the purpose of making sure customers were unique.
         List<Customer> customers = new ArrayList<>();
         HashSet<Integer> uniqueIds = new HashSet<>();
 
@@ -58,7 +36,6 @@ public class Main {
             if (!uniqueIds.contains(id)) {
                 uniqueIds.add(id);
                 String name = row[1];
-                // TODO: add account record update to charge date
                 int balance = Integer.parseInt(row[2]);
                 customers.add(new Customer(id, name, balance));
             }
