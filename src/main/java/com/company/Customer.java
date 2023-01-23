@@ -4,10 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
-    private int id;
-    private String name;
-    private int balance; //added by me
+    private int id = -1;
+    private String name = "Empty";
+    private int balance = 0; //added by me, helper variable
     private List<AccountRecord> charges = new ArrayList<>();
+
+//    Default Constructor
+    public Customer() {}
+
+//    Constructor for Customers
+    public Customer(int id, String name, int balance) {
+        this.id = id;
+        this.name = name;
+        this.balance += balance;
+
+    }
 
     public int getId() {
         return id;
@@ -26,17 +37,17 @@ public class Customer {
     }
 
     public void updateBalance(int charge) {
-        balance += charge;
+        this.balance += charge;
     }
 
-    public int getBalance() { //made by me
+    public int getBalance() { //made by me, helper method
         //update this
-        return 0;
+        return this.balance;
     }
 
-    public checkPositive(Customer aCustomer) { //made by me
-        if (aCustomer.balance >= 0) {return true;}
-        else {return false}
+    public boolean checkPositive() { //made by me, helper method
+        if (this.balance >= 0) {return true;}
+        else {return false;}
     }
 
     public List<AccountRecord> getCharges() {
@@ -46,6 +57,7 @@ public class Customer {
     @Override
     public String toString() {
         //update this
-        return "Update me";
+        String toString = this.id + " " + this.name + " " + this.balance;
+        return toString;
     }
 }
